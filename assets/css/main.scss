@@ -10,3 +10,28 @@
 .home-link{display:inline-block;font-weight:500;font-size:clamp(22px,6vw,40px);line-height:1.2;color:var(--fg);text-decoration:none;padding:.25em .35em;border-radius:12px;transition:transform .12s}
 .home-link:hover{transform:translateY(-1px);text-decoration:underline}
 .home-link:focus-visible{outline:2px solid #1a73e8;outline-offset:4px}
+
+/* === photograph page === */
+.gallery { background: #1b1b1b; }  /* スクショのように周囲を暗く */
+.gallery-container{
+  max-width: 960px;
+  margin: 48px auto;
+  padding: 0 16px;                 /* 端末左右の余白 */
+}
+.gallery-stack{
+  margin: 0; padding: 0; list-style: none;
+  display: flex; flex-direction: column; gap: 64px; /* 上下間隔を統一 */
+}
+.frame{
+  background: #fff;                /* 写真の“台紙” */
+  padding: 24px;                   /* 台紙の余白（統一ポイント）*/
+}
+.photo{
+  display: block;
+  width: 100%; height: auto;       /* 縦横比維持でフィット */
+}
+@media (min-width: 768px){
+  .gallery-container{ margin: 64px auto; }
+  .gallery-stack{ gap: 80px; }
+  .frame{ padding: 32px; }         /* 画面が広い時は余白を少し増やす */
+}

@@ -1,5 +1,5 @@
 ---
-layout: home       # ひとまず同じレイアウトでもOK
+layout: gallery
 title: photograph
 permalink: /photograph/
 ---
