@@ -1,0 +1,6 @@
+photos:
+  - src: https://example.com/photos/flower-01.jpg
+    alt: flower 01
+  - src: https://example.com/photos/flower-02.jpg
+    alt: flower 02
+# 画像URLは外部CDN推奨（Cloudinary/S3など）。ローカルに置くなら /assets/img/... でもOK
