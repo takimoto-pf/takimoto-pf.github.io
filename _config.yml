@@ -5,3 +5,7 @@ theme: null          # 既定テーマを外す＝独自テンプレ前提
 plugins: []          # Pages標準のまま
 sass:
   sass_dir: assets/css
+collections:
+  hyogen:
+    output: true
+    permalink: /hyo-gen/:name/

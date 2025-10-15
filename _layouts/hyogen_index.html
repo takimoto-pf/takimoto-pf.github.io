@@ -1,0 +1,11 @@
+---
+layout: default
+---
+<main class="hyogen-titlelist" aria-label="hyo-gen list">
+  <ul class="hyogen-list-only" role="list">
+    {%- assign items = site.hyogen | sort: "date" | reverse -%}
+    {%- for p in items -%}
+      <li><a class="hyogen-titlelink" href="{{ p.url | relative_url }}">{{ p.title }}</a></li>
+    {%- endfor -%}
+  </ul>
+</main>
