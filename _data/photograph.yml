@@ -1,6 +1,6 @@
 photos:
-  - src: https://example.com/photos/flower-01.jpg
-    alt: flower 01
+  - src: https://res.cloudinary.com/daaq8wbkj/image/upload/v1760503213/for_gallary_001_gzp6rf.jpg
+    alt: for gallary 001
   - src: https://example.com/photos/flower-02.jpg
-    alt: flower 02
+    alt: for gallary 002
 # 画像URLは外部CDN推奨（Cloudinary/S3など）。ローカルに置くなら /assets/img/... でもOK
