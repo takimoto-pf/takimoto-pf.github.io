@@ -1,1 +1,4 @@
-# Hello, Pages
+---
+layout: home
+title: Home
+---
