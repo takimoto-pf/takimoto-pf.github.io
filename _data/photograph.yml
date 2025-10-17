@@ -1,6 +1,16 @@
 photos:
   - src: https://res.cloudinary.com/daaq8wbkj/image/upload/v1760503213/for_gallary_001_gzp6rf.jpg
     alt: for gallary 001
-  - src: https://example.com/photos/flower-02.jpg
+  - src: https://res.cloudinary.com/daaq8wbkj/image/upload/v1760709834/for_gallary_002_tacjng.jpg
     alt: for gallary 002
+  - src: https://res.cloudinary.com/daaq8wbkj/image/upload/v1760709856/for_gallary_003_r9hg4k.jpg
+    alt: for gallary 003
+  - src: https://res.cloudinary.com/daaq8wbkj/image/upload/v1760709867/for_gallary_004_wmsvk5.jpg
+    alt: for gallary 004
+  - src: https://example.com/photos/flower-02.jpg
+    alt: for gallary 005
+  - src: https://res.cloudinary.com/daaq8wbkj/image/upload/v1760709878/for_gallary_006_gqnqm2.jpg
+    alt: for gallary 006
+  - src: https://res.cloudinary.com/daaq8wbkj/image/upload/v1760709889/for_gallary_007_naizfl.jpg
+    alt: for gallary 007
 # 画像URLは外部CDN推奨（Cloudinary/S3など）。ローカルに置くなら /assets/img/... でもOK

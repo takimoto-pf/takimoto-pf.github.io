@@ -15,15 +15,10 @@
 .gallery-container{
   max-width: 960px;
   margin: 48px auto;
-  padding: 0 16px;                 /* 端末左右の余白 */
 }
 .gallery-stack{
   margin: 0; padding: 0; list-style: none;
-  display: flex; flex-direction: column; gap: 64px; /* 上下間隔を統一 */
-}
-.frame{
-  background: #fff;                /* 写真の“台紙” */
-  padding: 24px;                   /* 台紙の余白（統一ポイント）*/
+  display: flex; flex-direction: column; gap: 6px; /* 上下間隔を統一 */
 }
 .photo{
   display: block;
