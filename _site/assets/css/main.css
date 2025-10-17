@@ -28,3 +28,11 @@ body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.6,-apple
   .gallery-stack { gap: 80px; }
   .frame { padding: 32px; }
   /* 画面が広い時は余白を少し増やす */ }
+/* === hyo-gen: title-only index === */
+.hyogen-titlelist { max-width: 680px; /* スクショのように細めの行幅 */ margin: 48px auto; padding: 0 16px; background: #fff; }
+
+.hyogen-list-only { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 24px; /* 行間（タイトル間のスペース） */ }
+
+.hyogen-titlelink { display: block; color: inherit; text-decoration: none; font-size: clamp(18px, 4.8vw, 24px); /* だいたいスクショのサイズ感 */ line-height: 1.8; /* ゆったり行間 */ letter-spacing: .02em; padding: 0; /* 余白は親で管理 */ }
+
+.hyogen-titlelink:hover { text-decoration: underline; }

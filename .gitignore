@@ -1,0 +1,10 @@
+# === Jekyll build artifacts ===
+_site/
+.jekyll-cache/
+.sass-cache/
+vendor/
+
+# === OS / Editor / IDE ===
+.DS_Store
+Thumbs.db
+.vscode/
