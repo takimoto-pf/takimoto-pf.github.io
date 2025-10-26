@@ -1,0 +1,90 @@
+/* ============================
+   audio player (responsive, Apple Music style, size fix)
+   ============================ */
+
+.audio-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 3rem auto;
+  text-align: center;
+  width: 100%;
+  max-width: 360px;        /* ← 幅を少し抑え気味に */
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+/* ジャケット画像ボタン */
+.audio-cover-btn {
+  position: relative;
+  display: block;
+  width: 100%;
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0 auto 1rem;
+  cursor: pointer;
+}
+
+/* 画像サイズ調整を強制 */
+.audio-cover-btn .audio-cover {
+  display: block;
+  width: 100%;             /* ← 親幅いっぱいに */
+  height: auto;            /* ← 高さ自動調整 */
+  aspect-ratio: 1 / 1;     /* ← 常に正方形 */
+  object-fit: cover;       /* ← 中央でトリミング */
+  border: none;
+  background: none;
+  border-radius: 8px;
+  box-shadow: none;        /* ← 不要な枠・影なし */
+  max-width: 100%;         /* ← コンテナ外にはみ出さない */
+  max-height: 100vw;       /* ← 画面幅以上に拡大しない */
+  transition: transform 0.2s ease;
+}
+
+/* hover時に軽く拡大 */
+.audio-cover-btn:hover .audio-cover {
+  transform: scale(1.02);
+}
+
+/* 再生・停止アイコン */
+.audio-cover-btn .audio-playicon,
+.audio-cover-btn .audio-pauseicon {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  font-size: 1.2rem;
+  background: rgba(255, 255, 255, 0.85);
+  color: #000;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  transition: opacity 0.15s ease;
+}
+.audio-cover-btn .audio-pauseicon { opacity: 0; }
+
+/* 曲タイトル */
+.audio-meta .audio-title {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #222;
+  margin-bottom: 0.5rem;
+}
+
+/* audioプレイヤー */
+.audio-card audio {
+  width: 100%;
+  outline: none;
+  margin: 0 auto;
+  border: none;
+  background: none;
+}
+
+/* モバイル最適化 */
+@media (max-width: 480px) {
+  .audio-card {
+    margin: 2rem auto;
+    max-width: 90%;
+    padding: 0;
+  }
+}

@@ -1,20 +1,14 @@
-<!doctype html>
-<html lang="ja">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>{{ page.title }} | {{ site.title }}</title>
-  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
-</head>
-<body class="gallery">
-  <main class="gallery-container" aria-label="Photographs">
-    <ul class="gallery-stack" role="list">
-      {%- for p in site.data.photograph.photos -%}
-      <li class="frame">
-        <img class="photo" src="{{ p.src }}" alt="{{ p.alt | default: '' }}">
-      </li>
-      {%- endfor -%}
-    </ul>
-  </main>
-</body>
-</html>
+---
+layout: default
+title: photograph
+body_class: gallery
+---
+<main class="gallery-container" aria-label="Photographs">
+  <ul class="gallery-stack" role="list">
+    {%- for p in site.data.photograph.photos -%}
+    <li class="frame">
+      <img class="photo" src="{{ p.src }}" alt="{{ p.alt | default: '' }}" loading="lazy">
+    </li>
+    {%- endfor -%}
+  </ul>
+</main>

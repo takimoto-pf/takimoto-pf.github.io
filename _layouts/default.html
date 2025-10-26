@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+</head>
+
+<body class="{{ page.body_class | default: '' }}">
+
+  <header class="site-header">
+  </header>
+
+{%- comment -%} パンくず {%- endcomment -%}
+{% unless page.url == "/" %}
+  {%- assign segs = page.url | split:'/' | where_exp:'s','s != ""' -%}
+  {% if segs.size > 0 %}
+    <nav class="breadcrumbs" aria-label="breadcrumb">
+      <ol>
+        <li><a href="{{ '/' | relative_url }}">home</a></li>
+        {%- assign path = '' -%}
+        {%- for s in segs -%}
+          {%- assign path = path | append:'/' | append:s -%}
+          {% if forloop.last %}
+            <li aria-current="page">{{ page.title | default: s }}</li>
+          {% else %}
+            <li><a href="{{ path | relative_url }}">{{ s }}</a></li>
+          {% endif %}
+        {%- endfor -%}
+      </ol>
+    </nav>
+  {% endif %}
+{% endunless %}
+
+  <main>
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <small>&copy; {{ site.time | date: "%Y" }} {{ site.title }}</small>
+  </footer>
+  <script src="{{ '/assets/js/audio.js' | relative_url }}" defer></script>
+</body>
+</html>
