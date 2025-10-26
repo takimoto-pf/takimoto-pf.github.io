@@ -1,0 +1,11 @@
+<div class="audio-card">
+  <button class="audio-cover-btn" type="button" data-audio-id="{{ include.id | default: 'track1' }}">
+    <img src="{{ include.cover | relative_url }}" alt="{{ include.title | default: 'audio cover' }}" class="audio-cover" loading="lazy">
+    <span class="audio-playicon" aria-hidden="true">▶︎</span>
+    <span class="audio-pauseicon" aria-hidden="true">❚❚</span>
+  </button>
+  <div class="audio-meta"><div class="audio-title">{{ include.title }}</div></div>
+  <audio id="{{ include.id | default: 'track1' }}" preload="metadata">
+    <source src="{{ include.src | relative_url }}" type="audio/mpeg">
+  </audio>
+</div>

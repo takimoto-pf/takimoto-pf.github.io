@@ -4,7 +4,8 @@ url: "https://takimoto-pf.github.io"
 theme: null          # 既定テーマを外す＝独自テンプレ前提
 plugins: []          # Pages標準のまま
 sass:
-  sass_dir: assets/css
+  sass_dir: _sass        # ← これがポイント
+  style: compressed
 collections:
   hyogen:
     output: true

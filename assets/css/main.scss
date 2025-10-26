@@ -1,6 +1,7 @@
 ---
 
 ---
+@import "components/audio";
 
 :root { --fg:#111; --bg:#fff; }
 *{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif}
@@ -10,6 +11,56 @@
 .home-link{display:inline-block;font-weight:500;font-size:clamp(22px,6vw,40px);line-height:1.2;color:var(--fg);text-decoration:none;padding:.25em .35em;border-radius:12px;transition:transform .12s}
 .home-link:hover{transform:translateY(-1px);text-decoration:underline}
 .home-link:focus-visible{outline:2px solid #1a73e8;outline-offset:4px}
+
+/* === sitemap style === */
+.breadcrumbs {
+  position: sticky;       
+  top: 0;                 /* 画面上端に吸着 */
+  z-index: 1000;          /* コンテンツより前面に */
+  background: transparent;/* 背景は透明 */
+  padding: 0.5rem 1rem;   /* 文字まわりの余白 */
+  margin: 0.5rem 1.5rem 1rem;
+  font-size: 0.9em;
+  color: #777;            /* 必要なら調整 */
+  pointer-events: auto;   /* リンクをクリック可能に（明示） */
+  /* 視認性が低い場合は下の一行をONに（薄い縁取り） */
+  /* text-shadow: 0 1px 0 rgba(255,255,255,.7), 0 0 2px rgba(0,0,0,.35); */
+}
+
+.breadcrumbs ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: .4rem;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  overflow-x: auto;       /* 長いとき横スクロール可 */
+  scrollbar-width: none;  /* Firefox: スクロールバー非表示 */
+}
+.breadcrumbs ol::-webkit-scrollbar { display: none; } /* WebKit */
+
+.breadcrumbs li + li::before {
+  content: "›";
+  margin: 0 .3rem;
+  opacity: .6;
+}
+
+.breadcrumbs a {
+  color: inherit;
+  text-decoration: none;
+}
+.breadcrumbs a:hover { text-decoration: underline; }
+
+/* === footer style === */
+.site-footer {
+  text-align: center;
+  padding: 1em 0;
+  color: #aaa;
+  font-size: 0.9em;
+  max-width: 800px;     /* コンテンツ幅に合わせる */
+  margin: 0 auto;        /* 中央に配置 */
+}
 
 /* === photograph page === */
 .gallery-container{
@@ -55,3 +106,42 @@
   padding: 0;                           /* 余白は親で管理 */
 }
 .hyogen-titlelink:hover{ text-decoration: underline; }
+
+/* ===============================
+   hyogen_item layout
+   =============================== */
+.hyogen-article {
+  max-width: 700px;        /* ページ中央に収まる幅 */
+  margin: 4rem auto;       /* 上下余白 + 左右中央寄せ */
+  padding: 0 1rem;         /* スマホでの余白確保 */
+  text-align: center;      /* タイトルなど外枠を中央寄せ */
+  line-height: 1.8;        /* 行間を広くして読みやすく */
+}
+
+.hyogen-article h1 {
+  font-weight: 400;        /* 太字解除 */
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.hyogen-article .hyogen-body {
+  text-align: left;        /* ← 本文だけ左寄せ */
+  font-size: 1rem;
+  color: #222;
+  margin: 0 auto;          /* 本文も中央に配置（ブロック自体） */
+  max-width: 600px;        /* 本文幅をやや狭めてバランス良く */
+}
+
+.hyogen-article p {
+  margin-bottom: 1em;
+}
+
+.hyogen-article a {
+  color: #555;
+  text-decoration: underline;
+}
+
+.hyogen-article a:hover {
+  color: #000;
+}
+
