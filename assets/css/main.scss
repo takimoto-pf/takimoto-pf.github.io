@@ -52,6 +52,16 @@
 }
 .breadcrumbs a:hover { text-decoration: underline; }
 
+/* === maintenance-tag style === */
+.maintenance-tag {
+  display: block;        /* 横並びから縦並びに変更 */
+  font-size: 0.7rem;
+  color: #999;
+  margin-top: 0.2em;     /* web-appとの間に少し余白 */
+  font-style: italic;
+  text-align: center;    /* 中央揃え（任意） */
+}
+
 /* === footer style === */
 .site-footer {
   text-align: center;

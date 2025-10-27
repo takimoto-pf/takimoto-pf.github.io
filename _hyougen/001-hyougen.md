@@ -5,9 +5,10 @@ date: 2025-10-15
 ---
 {% include audio_player.html
    id="pastelblue"
-   src="assets/audio/pastelblue.mp3"
-   cover="assets/img/pastelblue.jpg"
+   src="https://res.cloudinary.com/daaq8wbkj/video/upload/v1761559665/pastelblue_qnetcv.mp3"
+   cover="https://res.cloudinary.com/daaq8wbkj/image/upload/v1761559126/pastelblue_zyujmj.jpg"
    title="パステルブルー by SUNO AI" %}
+
 
 
 ### lyrics
