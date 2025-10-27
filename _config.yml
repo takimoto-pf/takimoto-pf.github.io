@@ -7,6 +7,6 @@ sass:
   sass_dir: _sass        # ← これがポイント
   style: compressed
 collections:
-  hyogen:
+  hyougen:
     output: true
-    permalink: /hyo-gen/:name/
+    permalink: /hyougen/:name/

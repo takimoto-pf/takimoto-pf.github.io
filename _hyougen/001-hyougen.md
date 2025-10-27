@@ -1,5 +1,5 @@
 ---
-layout: hyogen_item
+layout: hyougen_item
 title: パステルブルー by SUNO AI
 date: 2025-10-15
 ---

@@ -1,5 +1,5 @@
 ---
-layout: hyogen_item
+layout: hyougen_item
 title: 写真 2025年の不器用なピンボール
 date: 2025-10-25
 ---
